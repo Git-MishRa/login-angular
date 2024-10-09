@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from './login/login.component';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from "./shared/components/navbar/navbar.component";
+import { UserProfileComponent } from './components/user/profile/user-profile/user-profile.component';
 
 @Component({
-  standalone: false,
   selector: 'app-root',
-  template: `<h1>Login Page</h1><app-login></app-login>`,
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent,UserProfileComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'epm.tr.angularclient';
+}

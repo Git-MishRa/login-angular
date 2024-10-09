@@ -1,0 +1,112 @@
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Card Container */
+.user-info .card {
+  border: none;
+  border-radius: 15px;
+  padding: 30px 40px; /* Increased padding for more space */
+  background-color: #f8f9fa; /* Soft background for elegance */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 700px; /* Fixed width for form layout */
+  min-height: 400px; /* Minimum height to prevent expansion */
+  margin: 30px auto; /* Centering the form */
+  overflow: hidden; /* Prevent card from growing */
+}
+
+/* Error Message Styling */
+.user-info .alert-danger {
+  background-color: transparent; /* No background, only text danger */
+  color: #dc3545; /* Text color for danger */
+  font-size: 0.95rem; /* Adjusted font size for errors */
+  padding: 0.75rem 1.5rem; /* More padding for error message */
+  border-radius: 0.4rem; /* Slight rounding for smoothness */
+  word-wrap: break-word; /* Ensures long messages wrap within the container */
+  border: none; /* No border */
+}
+
+/* Labels */
+.user-info .form-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+/* Form Control */
+.user-info .form-control {
+  border-color: #ced4da;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  height: calc(2.5rem + 2px);
+  border-radius: 0.4rem;
+}
+
+/* Smooth Animation */
+.animated {
+  transition: transform 0.5s ease-in-out; /* Smooth animation */
+}
+
+  .user-info .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  .user-info .form-control.rounded-pill {
+    border-radius: 50rem;
+  }
+
+/* Button Styling */
+.user-info .btn {
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50rem;
+  font-size: 1rem;
+}
+
+/* Text Error Message Styling */
+.text-danger {
+  color: #dc3545 !important;
+  font-size: 0.9rem;
+}
+
+/* Overall Form Layout */
+.user-info {
+
+  padding: 5px 0;
+}
+
+  .user-info .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .user-info .btn.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .user-info .btn.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+
+    .user-info .btn.btn-outline-secondary:hover {
+      background-color: #6c757d;
+      color: white;
+    }
+
+  /* Additional Styling for Better Spacing and Alignment */
+  .user-info .row {
+    margin-bottom: 1.5rem;
+  }

@@ -1,0 +1,103 @@
+/* Navbar styles with a modern gradient background */
+.custom-navbar {
+  background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);
+}
+
+/* Styling for the TravelExpert logo on the navbar */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif; /* Elegant and modern typeface */
+  font-size: 1.8rem; /* Optimal size for headlines */
+  font-weight: 600; /* Semi-bold which gives clarity without being too bold */
+  color: #ffffff; /* Pure white for maximum contrast */
+  letter-spacing: 0.5px; /* Slight spacing to increase luxury feel */
+  transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow to enhance legibility */
+}
+
+  .navbar-brand:hover {
+    color: #cffafe; /* Light blue similar to hover effects on other navbar items */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for a subtle lift effect on hover */
+  }
+
+/* Styles for nav links */
+.navbar-nav .nav-link {
+  font-weight: 500; /* Make the font slightly bolder */
+  color: #ffffff; /* White text color for legibility */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+  .navbar-nav .nav-link:hover {
+    color: #adebeb; /* Lighter shade of the primary color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+
+/* Adding padding to nav items for better spacing */
+.navbar-nav .nav-item {
+  margin-left: 15px; /* Space between items */
+}
+
+/* Style for the profile icon */
+.profile-icon {
+  font-size: 1.5rem; /* Increase the size of the profile icon */
+}
+
+/* Custom styles for login and register buttons */
+.btn-login, .btn-register {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+/* Updated color for register button to align with the navbar theme */
+.btn-register {
+  background: linear-gradient(90deg, #88d8f7, #20b2db); /* Refreshed gradient from light cyan to bright aqua */
+}
+
+  .btn-login:hover, .btn-register:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-login:active, .btn-register:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+/* Styling for dropdown elements */
+.dropdown-menu {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.dropdown-item {
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 8px 20px;
+  display: block;
+}
+
+  .dropdown-item:hover, .dropdown-item:focus {
+    background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+    color: #1a5a99;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-item:active {
+    background-color: #cce4ff;
+    color: #003366;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

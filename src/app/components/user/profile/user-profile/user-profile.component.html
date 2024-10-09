@@ -1,0 +1,81 @@
+<div *ngIf="confirmationMessage" class="alert alert-success alert-animation" [ngClass]="{ 'fade-out': hideAlert }">
+  {{ confirmationMessage }}
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger alert-animation" [ngClass]="{ 'fade-out': hideAlert }">
+  {{ errorMessage }}
+</div>
+
+
+<div class="d-flex">
+  <div class="sidebar">
+    <a class="d-flex align-items-center mb-4 text-dark text-decoration-none">
+      <span class="fs-4">Profile</span>
+    </a>
+
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <button class="nav-link btn" (click)="selectOption('profile')">
+          <i class="fas fa-user-circle"></i> Profile Settings
+        </button>
+      </li>
+      <li>
+        <button class="nav-link btn" (click)="selectOption('change-password')">
+          <i class="fas fa-lock"></i> Change Password
+        </button>
+      </li>
+      <li>
+        <button class="nav-link btn delete-button" (click)="openDeleteConfirmationModal()">
+          <i class="fas fa-trash-alt"></i> Delete Account
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <ng-container *ngIf="activeOption === 'profile'">
+      <app-user-info></app-user-info>
+    </ng-container>
+    <ng-container *ngIf="activeOption === 'change-password'">
+      <app-change-password></app-change-password>
+    </ng-container>
+  </div>
+
+
+  <!-- Modal Background Overlay -->
+  <div class="modal-overlay" *ngIf="showDeleteConfirmation" (click)="closeDeleteConfirmationModal()"></div>
+
+  <!-- Modal for delete confirmation -->
+  <div class="modal fade" [ngClass]="{'show': showDeleteConfirmation}" tabindex="-1" role="dialog" *ngIf="showDeleteConfirmation" style="display: block; background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content shadow-lg rounded-lg border-0">
+
+        <!-- Modal Header -->
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title text-dark fw-bold">
+            Confirm Deletion
+          </h5>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <p class="mb-3">Are you sure you want to delete your account?</p>
+          <p class="text-muted small mb-0">This action is irreversible, and all your data will be lost permanently.</p>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer border-0 justify-content-between">
+          <button type="button" class="btn btn-danger px-4 rounded-pill" (click)="confirmDelete()">
+            <i class="bi bi-trash me-2"></i> Delete
+          </button>
+          <button type="button" class="btn btn-outline-secondary px-4 rounded-pill" (click)="closeDeleteConfirmationModal()">
+            <i class="bi bi-x-circle me-2"></i> Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
